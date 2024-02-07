@@ -9,30 +9,23 @@ import Login from "./routes/login";
 import LoadingScreen from "./components/loading-screen";
 import CreateAccount from "./routes/create-account";
 import { auth } from "./firebase";
-
+import ProtectedRoute from "./components/protected-route";
+import ResetPassword from "./routes/reset-password";
+// const [TTT, innerText] = ["tempText", "abcde"];
 const router = createBrowserRouter([
   {
-    path: "/",
-    element: <Layout />,
+    path: "/", element: 
+    // <ProtectedRoute TTT={TTT}>{innerText}</ProtectedRoute>
+    <ProtectedRoute><Layout /></ProtectedRoute>
+    ,
     children: [
-      {
-        path: "home",
-        element: <Home />,
-      },
-      {
-        path: "profile",
-        element: <Profile />,
-      }
+      { path: "home", element: <Home /> },
+      { path: "profile", element: <Profile /> }
     ]
   },
-  {
-    path: "/login",
-    element: <Login />
-  },
-  {
-    path: "/create-account",
-    element: <CreateAccount />
-  }
+  { path: "/login", element: <Login /> },
+  { path: "/create-account", element: <CreateAccount /> },
+  { path: "/reset-password", element: <ResetPassword /> },
 ]);
 
 const GlobalStyles = createGlobalStyle`
