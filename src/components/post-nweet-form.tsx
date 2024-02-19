@@ -20,8 +20,9 @@ export default function PostNweetForm(){
         }
         console.log("files : ",files);
     }
-    const clicktest = () => {
+    const submit = () => {
         console.log("file : ", file);
+        setIsLoading(true);
     }
 
     return (
@@ -29,7 +30,7 @@ export default function PostNweetForm(){
             <NweetTextArea rows={5} maxLength={180} placeholder="What is happening?" value={nweet} onChange={onNweetChange}/>
             <NweetAttachFileButton htmlFor="file">{file ? file.name + " ✅" : "Add Photo"}</NweetAttachFileButton>
             <NweetAttachFileInput type="file" id="file" accept="image/*" onChange={onFileChange}/>
-            <NweetSubmitBtn type="submit" onClick={clicktest} value={isLoading ? "Posting..." : "Post Nweet"} />
+            <NweetSubmitBtn type="submit" onClick={submit} value={isLoading ? "Posting..." : "Post Nweet"} />
         </NweetForm>
     );
 }
