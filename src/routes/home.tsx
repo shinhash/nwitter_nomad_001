@@ -1,16 +1,12 @@
-import { auth } from "../firebase";
+import styled from "styled-components";
+import PostNweetForm from "../components/post-nweet-form";
+
+const Wrapper = styled.div``;
 
 export default function Home(){
-
-    const logOut = function () {
-        console.log(auth.currentUser);
-        auth.signOut();
-    };
-
     return (
-        <div>
-            <h2>Home!!!</h2>
-            <button onClick={logOut}>Log out</button>
-        </div>
+        <Wrapper>
+            <PostNweetForm />
+        </Wrapper>
     );
 }

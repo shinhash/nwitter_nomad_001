@@ -1,6 +1,6 @@
 import { useState } from "react";
 import { Error, Form, Input, Title, Wrapper } from "../components/auth-components";
-import { confirmPasswordReset, createUserWithEmailAndPassword, sendPasswordResetEmail, applyActionCode, getAuth } from "firebase/auth";
+import { createUserWithEmailAndPassword, sendPasswordResetEmail } from "firebase/auth";
 import { auth } from "../firebase";
 import { FirebaseError } from "firebase/app";
 

@@ -61,7 +61,7 @@ export default function Login(){
 
     return (
     <Wrapper>
-        <Title>Log In χ</Title>
+        <Title>Log In Ⅹ</Title>
         <Form onSubmit={onSubmit}>
             <Input name="email"    onChange={onChange} value={email}    placeholder="Email"    type="email"    required />
             <Input name="password" onChange={onChange} value={password} placeholder="password" type="password" required />
